@@ -1,6 +1,6 @@
 # LineSniper
 
-![LineSniper Logo](image.png)
+![LineSniper Logo](icon.png)
 
 LineSniper is a powerful Chrome extension designed for frontend developers and designers. It allows you to add draggable lines and points directly onto any webpage, calculate precise pixel distances between elements, and manage them easily through a user-friendly popup interface. Perfect for layout measurements, debugging designs, and ensuring pixel-perfect alignments.
 
