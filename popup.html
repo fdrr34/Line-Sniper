@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Line Sniper</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 0px 15px;
+        width: 300px;
+        background-color: #f0f8ff; /* Light blue background like the image */
+        color: #333;
+      }
+      h4 {
+        margin: 20px 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      select,
+      input[type="number"],
+      input[type="color"] {
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 8px; /* Rounded corners like the image */
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      input[type="color"] {
+        width: 50px;
+        height: 30px;
+        padding: 0;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007bff; /* Blue buttons like the image */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Rounded corners */
+        cursor: pointer;
+        margin: 5px 5px 5px 0;
+        font-size: 14px;
+      }
+      button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+      }
+      #elementsList {
+        max-height: 200px;
+        overflow-y: auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      #elementsList div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+      #elementsList input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      #elementsList button {
+        margin-left: auto;
+        padding: 5px 10px;
+        font-size: 12px;
+        background-color: #dc3545; /* Red for delete */
+        border-radius: 4px;
+      }
+      #elementsList button:hover {
+        background-color: #c82333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Line Sniper</h1>
+    <h4>Add Line</h4>
+    <label
+      >Type:
+      <select id="lineType">
+        <option value="horizontal">Horizontal</option>
+        <option value="vertical">Vertical</option>
+      </select>
+    </label>
+    <label>Color: <input type="color" id="lineColor" value="#FF0000" /></label>
+    <label
+      >Width (px): <input type="number" id="lineWidth" value="2" min="1"
+    /></label>
+    <button id="addLine">Add Line</button>
+    <button id="addMultipleLines">Add Multiple Lines (5)</button>
+
+    <h4>Add Point</h4>
+    <label>Color: <input type="color" id="pointColor" value="#0000FF" /></label>
+    <button id="addPoint">Add Point</button>
+
+    <h4>Elements List</h4>
+    <div id="elementsList"></div>
+
+    <button id="calculateDistance">Calculate Distance Between Selected</button>
+    <button id="deleteSelected">Delete Selected</button>
+    <button id="clearAll">Clear All</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
